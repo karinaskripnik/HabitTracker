@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HabitTitleView" customModule="Habittracker" customModuleProvider="target">
+            <connections>
+                <outlet property="searchButton" destination="RSQ-cY-YTT" id="Fcq-Y4-Rv9"/>
+                <outlet property="titleTextField" destination="UnL-gC-Iw5" id="l5z-Bc-ZlT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="491" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="UnL-gC-Iw5">
+                    <rect key="frame" x="0.0" y="0.0" width="391" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="aOY-lo-78T"/>
+                    </constraints>
+                    <color key="textColor" name="textDark"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didEndTitleTextFieldEditing:" destination="-1" eventType="editingDidEnd" id="EdS-K4-VSI"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSQ-cY-YTT">
+                    <rect key="frame" x="391" y="0.0" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="oZk-m1-e8L"/>
+                        <constraint firstAttribute="height" constant="100" id="pSL-5j-V5A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="tintColor" name="textLight"/>
+                    <state key="normal" image="magnifyingglass" catalog="system"/>
+                    <connections>
+                        <action selector="didTapsSearchButton:" destination="-1" eventType="touchUpInside" id="HaA-tZ-Epy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="backgroundLight"/>
+            <constraints>
+                <constraint firstItem="RSQ-cY-YTT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="60w-um-4fU"/>
+                <constraint firstAttribute="trailing" secondItem="RSQ-cY-YTT" secondAttribute="trailing" id="6hX-Jv-aTe"/>
+                <constraint firstItem="RSQ-cY-YTT" firstAttribute="leading" secondItem="UnL-gC-Iw5" secondAttribute="trailing" id="Mtu-sf-y0E"/>
+                <constraint firstItem="UnL-gC-Iw5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Q56-Fe-sfF"/>
+                <constraint firstAttribute="bottom" secondItem="UnL-gC-Iw5" secondAttribute="bottom" id="VJD-yv-5Eq"/>
+                <constraint firstItem="UnL-gC-Iw5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rgs-ei-6J1"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-54.347826086956523" y="-51.766304347826093"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="backgroundLight">
+            <color red="0.80800002813339233" green="0.87800002098083496" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textDark">
+            <color red="0.0040000001899898052" green="0.082000002264976501" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textLight">
+            <color red="0.0040000001899898052" green="0.125" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
